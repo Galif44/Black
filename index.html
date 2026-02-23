@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hacker Mode</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background: black;
+  color: lime;
+  font-family: monospace;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
 
+<h2>🔐 Hacker Mode Activated...</h2>
+<div id="hack"></div>
+
+<script>
+let text = [
+"Connecting to server...",
+"Bypassing firewall...",
+"Accessing database...",
+"Decrypting passwords...",
+"Downloading files...",
+"Access Granted ✔"
+];
+
+let i = 0;
+
+function typeLine(){
+  if(i < text.length){
+    document.getElementById("hack").innerHTML += text[i] + "<br>";
+    i++;
+    setTimeout(typeLine, 1000);
+  }
+}
+
+typeLine();
+</script>
+
+</body>
+</html>
